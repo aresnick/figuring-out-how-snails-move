@@ -1,0 +1,3 @@
+.DS_Store
+media-archive/ # Archive of media for the day on S3, too big for GitHub
+.env # Credentials for `s3-website`
