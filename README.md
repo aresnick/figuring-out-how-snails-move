@@ -2,7 +2,7 @@
 
 `figuring-out-how-a-snail-moves` is a small, one-day project resulting from a workshop [Molly Josephs](https://mollyj.org) put together on 2 August 2017.  You can see the current, rough draft at [http://figuring-out-how-snails-move.s3-website-us-east-1.amazonaws.com/](http://figuring-out-how-snails-move.s3-website-us-east-1.amazonaws.com/).
 
-## Overview (excerpted from [`v0.1`](http://figuring-out-how-snails-move.s3-website-us-east-1.amazonaws.com/#overview)
+## Overview (excerpted from [`v0.1`](http://figuring-out-how-snails-move.s3-website-us-east-1.amazonaws.com/#overview))
 
 N.B. This is an attempt to explain, in simple terms, how land snails move. After hanging out with some snails for an hour, this is what I came up with. So it's just my attempt to understand and describe how a snail moves, combining analogy and direct observation, informed by reading some of the literature out there on the topic.
 
