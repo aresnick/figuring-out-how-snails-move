@@ -10,41 +10,41 @@
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <title>🐌 Figuring out how snails move</title>
     <style type="text/css">
-         :root {
-            --my-blue: #5BC0EB;
-            --my-yellow: #FDE74C;
-            --my-green: #9BC53D;
-            --my-red: #E55934;
-            --my-orange: #FA7921;
-        }
+     :root {
+        --my-blue: #5BC0EB;
+        --my-yellow: #FDE74C;
+        --my-green: #9BC53D;
+        --my-red: #E55934;
+        --my-orange: #FA7921;
+    }
 
-        body {
-            background-color: #FBF1A9;
-        }
+    body {
+        background-color: #FBF1A9;
+    }
 
-        #overview {
-            background-color: var(--my-yellow);
-        }
+    #overview {
+        background-color: var(--my-yellow);
+    }
 
-        #how-does-a-snail-move {
-            background-color: var(--my-green);
-        }
+    #how-does-a-snail-move {
+        background-color: var(--my-green);
+    }
 
-        #other-questions-which-came-up-observing-snails {
-            background-color: var(--my-blue);
-        }
+    #other-questions-which-came-up-observing-snails {
+        background-color: var(--my-blue);
+    }
 
-        #workshop-feedback {
-            background-color: var(--my-red);
-        }
+    #workshop-feedback {
+        background-color: var(--my-red);
+    }
 
-        #related-resources {
-            background-color: var(--my-orange);
-        }
+    #related-resources {
+        background-color: var(--my-orange);
+    }
 
-        code {
-            white-space: pre;
-        }
+    code {
+        white-space: pre;
+    }
     </style>
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -54,7 +54,7 @@
 <body class='dark-gray'>
     <div class='w-50-ns center pa2'>
         <h1 class='f-headline-ns f2 lh-title mb0'>Figuring out how snails move</h1>
-        <h2 class='f2-ns f4 lh-title mb5-ns mb3'>Notes from an observation of a friendly neighborhood snail <br> <small class='mid-gray o-50'>v0.1, last revised 2 August 2017</small></h2>
+        <h2 class='f2-ns f4 lh-title mb5-ns mb3'>Notes from an observation of a friendly neighborhood snail <br> <small class='mid-gray o-50'>v0.2.1, last revised 6 August 2017</small></h2>
     </div>
     <video class='w-100' src='./assets/snail-hero.mp4' autoplay loop style="margin-bottom: -0.25rem;"></video>
     <div id='overview' class='w-100 pa2'>
@@ -99,275 +99,381 @@
         <section class='lh-copy measure f3 center mt0 pt2 mb0 pb4'>
             <h2 class='f1 lh-title'>How does a snail move?</h2>
             <p>
-                How do things move? Well, every <em>thing</em> has some weight. Because it has some weight, to move it we have to push on it. But how do we push on it? Weirdly, the only way we can push on something is by trying to push on something else, and having that something else push back on us.
+                The way snails move turns out to be pretty unusual. We're going to try to understand it by analogy— First thinking about ourselves, then inchworms, then earthworms, before finally looking at an actual snail. But before we get to any of that, let's start with thinking about how things move, period—
+            </p>
+            <p>
+                So how do things move? Well, every <em>thing</em> has weight. Because it has some weight, to move it we have to push on it. But how do we push on it? Weirdly, the only way we can push on something is by pushing on something else, and having that something else push back on us.
             </p>
             <p>
                 What?
             </p>
             <p>
-                Well, think about how we walk. Imagine you're just standing there.
+                Well, think about how you walk. Imagine you're just standing there.
             </p>
-            <p><img class='w-100' alt='A drawing of a standing character in profile' src='./assets/standing.png'></p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-100 center'>
+                    <img class='w-100' alt='A drawing of a standing character in profile' src='./assets/standing.png'>
+                </div>
+            </figure>
             <p>
                 How do you take a step?
             </p>
             <p>
                 Well first you lift your foot.
             </p>
-            <p>
-                <img class='w-100' alt='A drawing of a character in profile, lifting their foot' src='./assets/foot-lift.png'>
-            </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-25 center'>
+                    <img class='w-100 fl' alt='A drawing of a character in profile, lifting their foot' src='./assets/foot-lift.png'>
+                </div>
+            </figure>
             <p>
                 Then you move that lifted foot forward, moving your whole body a little bit forward at the same time.
             </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-50 center'>
+                    <img class='w-50 fl' alt='A drawing of a character in profile, lifting their foot' src='./assets/foot-lift.png'>
+                    <img class='w-50 fl' alt='A drawing of a character in profile, midway through their step' src='./assets/forward-foot-lift.png'>
+                </div>
+            </figure>
             <p>
-                <img class='w-100' alt='A drawing of a character in profile, midway through their step' src='./assets/forward-foot-lift.png'>
+                When you moved your leg forward, you had to "push" on something. Imagine floating in space and taking a step. Your leg would move, but <em>you</em> wouldn't.
             </p>
             <p>
-                But wait, how did you do that? When you moved your leg forward, you had to "push" on something. Imagine floating in space and taking a step. Your leg would move, but <em>you</em> wouldn't.
+                Why not? Well, because when you take a step without actually standing on anything, you're just moving your legs around.
             </p>
             <p>
-                Why not? Well, because when you take a step without actually standing on anything, you're just moving your legs around. But, when one of your feet is "stuck" to the earth, when you try to move your other leg, the stuck leg doesn't move, so not only does your other leg move forward, but the rest of your body is pulled/pushed along with it.
+                Imagine one of your feet is "stuck" to the earth; when you try to move your other leg, your stuck leg doesn't move. So not only does your other leg move forward, but the rest of your body is pulled/pushed along with it.
             </p>
             <p>
                 Then what happens? Your lifted foot hits the ground and <em>it</em> gets stuck.
             </p>
-            <p>
-                <img class='w-100' alt='A drawing of a character stepping forward' src='./assets/front-foot-stuck.png'>
-            </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-75 center'>
+                    <img class='w-third fl' alt='A drawing of a character in profile, lifting their foot' src='./assets/foot-lift.png'>
+                    <img class='w-third fl' alt='A drawing of a character in profile, midway through their step' src='./assets/forward-foot-lift.png'>
+                    <img class='w-third fl' alt='A drawing of a character stepping forward' src='./assets/front-foot-stuck.png'>
+                </div>
+            </figure>
             <p>
                 Then, you lift your back foot, and move it forward— Now, your front (stuck) foot is <em>pulling</em> your back leg (and body) forward.
             </p>
-            <p>
-                <img class='w-100' alt='A drawing of a standing lifting their back foot' src='./assets/back-foot-lift.png'>
-            </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-100 center'>
+                    <img class='w-25 fl' alt='A drawing of a character in profile, lifting their foot' src='./assets/foot-lift.png'>
+                    <img class='w-25 fl' alt='A drawing of a character in profile, midway through their step' src='./assets/forward-foot-lift.png'>
+                    <img class='w-25 fl' alt='A drawing of a character stepping forward' src='./assets/front-foot-stuck.png'>
+                    <img class='w-25 fl' alt='A drawing of a standing lifting their back foot' src='./assets/back-foot-lift.png'>
+                </div>
+            </figure>
             <p>
                 Then, your back foot hits the ground, becomes the front foot, and the whole process starts all over again. And then you're walking!
             </p>
-            <p>
-                <img class='w-100' alt='An animation of a character walking in profile' src='./assets/walking.gif'>
-            </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-100 center'>
+                    <img class='w-100' alt='An animation of a character walking in profile' src='./assets/walking.gif'>
+                </div>
+            </figure>
             <p>
                 So fundamentally, for something to move along the ground, we need to have it push on something, extend or move itself, grab hold further along its path, and use its new hold to move again.
             </p>
             <p>
-                It's pretty easy to see how we do this with two feet. But what if you don't have feet?
+                It's pretty easy to see how we do this with two feet. But what if you don't have legs?
             </p>
             <p>
-                Let's think about an inchworm. An inchworm doesn't have feet, right?
+                Let's think about an inchworm. An inchworm doesn't have legs, right?
             </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-100 center'>
+                    <img class='w-100' alt='An image of an inchworm, scrunched up' src='./assets/inchworm-still.png'>
+                </div>
+            </figure>
             <p>
-                <img class='w-100' alt='An image of an inchworm, scrunched up' src='./assets/inchworm-still.png'>
+                Well if we look up close at an inchworm, we see it actually kind of does— An inchworm keeps its rear "legs" stuck, then stretches itself forward,
             </p>
-            <p>
-                Well if we look up close at an inchworm, we see it actually kind of does— even though it doesn't have legs. An inchworm keeps its rear "legs" stuck, then stretches itself forward,
-            </p>
-            <p>
-                <img class='w-100' alt='An image of an inchworm stretching forward' src='./assets/inchworm-forward.png'>
-            </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-100 center'>
+                    <img class='w-100' alt='An image of an inchworm stretching forward' src='./assets/inchworm-forward.png'>
+                </div>
+            </figure>
             <p>
                 then sticks its "front" legs, lifts its "rear", squinches up,
             </p>
-            <p>
-                <img class='w-100' alt='A image of an inchworm pulling its rear forward' src='./assets/inchworm-rear.png'>
-            </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-100 center'>
+                    <img class='w-100' alt='A image of an inchworm pulling its rear forward' src='./assets/inchworm-rear.png'>
+                </div>
+            </figure>
             <p>
                 and repeats.
             </p>
-            <p>
-                <video class='w-100' src='./assets/real-inchworm.mp4' autoplay loop></video>
-            </p>
-            <p>
-                So that's how the inchworm moves.
-            </p>
-            <p>
-                And actually, it's pretty similar to how an earthworm moves…
-                <video id='live-earthworm' class='w-100' src='./assets/live-earthworm.mp4' autoplay loop></video>
-            </p>
-            <p>
-                …except an earthworm doesn't really squinch up in the same way. Earthworms can shorten and lengthen different parts of their body because of some amazing plumbing they have inside of them. Kind of like when you stretch your neck out and in, you know how your vertebrae get further apart? The earthworm can do that in different parts of its body, all along its body.
-            </p>
-            <p>
-                <video class='w-100' src='./assets/model-earthworm.mp4' autoplay loop></video>
-                <script>
-                    let earthwormModel = document.querySelector("video[src='./assets/model-earthworm.mp4']");
-                    earthwormModel.addEventListener('play', function(event) {
-                        earthwormModel.playbackRate = 3;
-                    });
-                </script>
-            </p>
-            <p>
-                But, if the earthworm doesn't squinch up and down in the same way, what makes parts of it stick and parts of it slide? Unlike the inchworm (which just puts its body on the ground to stick/lifts it to slide), the earthworm has these amazing bristles along its whole body which it can extend and retract. If we look at a slice of the earthworm, it looks something like this…you can see the bristles indicated by the arrow:
-                <img class='w-100' alt='Section of an earthworm, showing the bristles on its exterior' src='./assets/earthworm-section.png'>
-            </p>
-            <p>And the earthworm extends its bristles in the part of its body which its contracting, and retracts them where its body is extending.
-            </p>
-            <p>
-                <video class='w-100' src='./assets/earthworm-bristles.mp4' autoplay loop></video>
-                <script>
-                    let earthwormBristles = document.querySelector("video[src='./assets/earthworm-bristles.mp4']");
-                    earthwormBristles.addEventListener('play', function(event) {
-                        earthwormBristles.playbackRate = 3;
-                    });
-                </script>
-            </p>
-            <p>
-                So, it grabs the surrounding soil and pushes off of it, contracting and extending as it pulls and pushes its way through soil.
-            </p>
-            <p>
-                This is something else that's different than our inchworm— the earthworm has <em>many</em> "feet" (for our purposes, a foot is just the thing that sticks to the ground that we push off of). Just to make sure we understand, let's try to take this back to our inchworm.
-                <img class='w-100' alt='A line drawing animation of an inchworm' src='./assets/basic-inchworm.gif'>
-            </p>
-            <p>
-                The earthworm has a ton of "feet". But for now, let's start just by imagining an inchworm with two humps instead of one. (Or, if it's less weird for you, imagine two inchworms, where one inchworm's head hangs onto the other one's butt.)
-            </p>
-            <p>
-                <img class='w-100' alt='A line drawing of an inchworm with two humps' src='./assets/two-hump-inchworm.png'>
-            </p>
-            <p>
-                If our two humped inchworm were to squinch up its humps and move the parts of the inchworm which are stuck on the ground, we'd have a three-footed inchworm (which, by the way, could move even faster—because it could stretch double the amount each time it squinched-and-flattened).
-            </p>
-            <p>
-                <img class='w-100' alt='A line drawing animation of an inchworm with two humps' src='./assets/two-hump-inchworm.gif'>
-            </p>
-            <p>
-                With that, you can imagine how we might go through a similar exercise to make a four- or five- or <em>n</em>-footed inchworm.
-            </p>
-            <p>
-                OK cool. Now let's imagine something weirder. Imagine making those humps <em>roll</em> instead of lift.
-            </p>
-            <p>
-                What?
-            </p>
-            <p>
-                Yeah, this is hard to wrap your head around.
-            </p>
-            <p>
-                In our current inchworm, the part of the inchworm that's the hump and the part that's the foot stay the same as it moves.
-            </p>
-            <p>
-                <img class='w-100' alt='A line drawing animation of an inchworm with two humps, each section a different color' src='./assets/two-color-hump-inchworm.gif'>
-            </p>
-            <p>
-                So here, for example, the green parts are the parts which scrunch. But, this doesn't have to be the case. You could imagine that an inchworm could, say, alternate which parts of its body it scrunches up, like this
-            </p>
-            <p>
-                <img class='w-100' alt='A line drawing animation of an inchworm with two humps, each section a different color, but the squinching section alternating' src='./assets/two-alternating-color-hump-inchworm.gif'>
-            </p>
-            <p>
-                But those sections we're highlighting are made up. A real inchworm (or earthworm) has dozens and sometimes hundreds of sections. You could imagine that instead of alternating sections that scrunch up, we could just slowly shift the sections which are scrunching up.
-            </p>
-            <p>
-                Let's look at it as a diagram.
-            </p>
-            <p class='mt4 mb4 near-white'>
-                <code>L — K — J — I — H — G — F — E — D — C — B — A</code>
-            </p>
-            <p>
-                Imagine this diagram represents an inchworm with a bunch more sections, of which, each one could scrunch. So our two hump earthworm might, for example, have been scrunching <span class='i'>AC</span> and <span class='i'>FH</span>.
-            </p>
-            <p>
-                So with this notation, what I meant when I said to imagine that we could <em>shift</em> the section which was scrunching is that maybe at first <span class='i'>AC</span> scrunches, then <span class='i'>BD</span>, then <span class='i'>CE</span>, and so on. And at the same time, maybe <span class='i'>FH</span> scrunches, then <span class='i'>GI</span>, then <span class='i'>HJ</span>. In other words, the first scrunch involves <span class='i'>AC</span>/<span class='i'>FH</span>, then <span class='i'>BD</span>/<span class='i'>GI</span>,then <span class='i'>CE</span>/<span class='i'>HJ</span>, and so on.
-            </p>
-            <p>
-                In this sense, the "foot" is more like a "wave" which is rolling down the inchworm. Instead of sections, imagine the inchworm as continuous—<span class='i'>i.e.</span> where every part of the work could be a foot—and you imagine hundreds or thousands of sections…kind of like a wave in a rope.
-            </p>
-            <p>
-                <video class='w-100' src='./assets/waving-rope.mp4' autoplay loop></video>
-            </p>
-            <p>
-                While that's a video of a wacky exercise, imagine that the rope was sticky and made of muscle, so that as the part of the wave touching the ground moved, the rope was also <em>pushing against</em> the part of the wave touching the ground.
-            </p>
-            <p>
-                Well incredibly, this is roughly how the snail works— This is what I meant when I asked you to imagine those humps <em>rolling</em> instead of lifting.
-            </p>
-            <p>
-                <video class='w-100' src='./assets/snail-gliding-waves.mp4' autoplay loop></video>
-            </p>
-            <p>
-                Except, we still have a couple questions to answer in this analogy. One of them is that a snail doesn't lift off the ground. An inchworm is lifting its body off the ground to reduce friction in some places. Those humps can push against its "feet" which are touching the ground.
-            </p>
-            <p>
-                <video class='w-100' src='./assets/snail-gliding-from-side.mp4' autoplay loop></video>
-                <script>
-                    let snailFromSide = document.querySelector("video[src='./assets/snail-gliding-from-side.mp4']");
-                    snailFromSide.addEventListener('play', function(event) {
-                        snailFromSide.playbackRate = 3;
-                    });
-                </script>
-            </p>
-            <p>
-                The snail's body stays in contact with the ground the whole time. So what gives?
-            </p>
-            <p>
-                Well, it turns out that the snail can do something like the earthworm. Remember how the earthworm could extend bristles out of part of its body to grab the dirt around it, and use that kinda like claws to push and pull its way through the soil? Snails can do something kind of like that— except instead of controlling bristles, snails control how sticky different areas underneath it are. That's actually what you're seeing in those waves in that snail video above…
-            </p>
-            <p>
-                <img class='w-100' alt='Two photos of a snail from below, in color and black and white, which highlight the waves moving it' src='./assets/snail-wave-bw-and-color.png'>
-            </p>
-            <p>
-                The dark parts of the snail are less sticky than the light parts. And that's all due to its slime.
-            </p>
-            <p>
-                It turns out the slime snails make is pretty special. There are actually two types of slime (that help lubricate and stick to things, respectively), and there are still plenty of open questions of exactly how the slimes work. But for our purposes, the most important thing to know about the slime that's underneath the snail is that when you push on it or squeeze it, it gets <em>less viscous</em>.
-            </p>
-            <p>
-                Roughly, that means that it acts like it's "less thick."
-            </p>
-            <p>
-                You know how it's easy to move your hand through water, a bit harder to move it through paint, even harder to move it through mayonnaise, and even harder than that to move it through peanut butter? That's viscosity. It's how much a fluid resists changing its shape when you push on it.
-            </p>
-            <p>
-                Most fluids that we're familiar with resist the same amount no matter how hard we're pushing on it. But some fluids change depending on how hard you push. They're called "non-Newtonian" for reasons that don't really matter to us.
-            </p>
-            <p>
-                Some get thicker—like <a class='link dim blue' href='https://en.wikipedia.org/wiki/Non-Newtonian_fluid#Oobleck'>oobleck</a>, if you've played with that before. Those are called "shear thickening". That roughly means that when you apply a force, the liquid gets thicker (<span class='i'>i.e.</span> more viscous).
-            </p>
-            <p>
-                Weirdly, there are some fluids which actually get <em>less viscous</em> when you push on them. Those are called "shear-thinning". This is the type of fluid snail's slime is. And this is the secret to the snail's motion. Incredibly, people don't understand what makes the slime shear thinning.
-            </p>
-            <p>
-                OK, so snails have this wild slime that gets thinner when we squeeze it. Cool. But how does the snail squeeze it? It turns out people don't <em>totally</em> know, but they think there are at least two things happening with the snail's muscles which squeeze the slime. The first is that the muscles on its rim, around the center of its underside, squeeze inward, toward the center, pinching the slime. You can see that wave pulsing around the rim of the snail's foot if you look closely.
-            </p>
-            <p>
-                <video class='w-100' src='./assets/snail-side-wave.mp4' autoplay loop></video>
-            </p>
-            <p>
-                The second is that kind of like the earthworm, the snail's body itself stretches in some places and contracts in others, and because the slime sticks to the body, this squeezes the slime in the other direction.
-            </p>
-            <p>
-                Together, if you look closely at the perimeter of the snail, you'll see that there's kind of this wave traveling around the edge of the snail <em>and</em> the whole snail is kind of puckering up and then expanding, pulsing.
-            </p>
-            <p>
-                <video class='w-100' src='./assets/snail-body-pulse.mp4' autoplay loop></video>
-            </p>
-            <p>
-                The incredibly coordinated movement of these muscles is what creates those waves of sticky and less sticky slime.
-            </p>
-            <p>
-                But…here I have to pause and admit that I lied when I said the snail controls how <em>sticky</em> its underside is. It's really about how viscous it is. Stickiness doesn't have anything to do with that. Super glue is <em>very sticky</em>, but not viscous at all. Elmer's glue is way less sticky, but much more viscous.
-            </p>
-            <p>
-                It would be simpler if this was just about how sticky the slime is. And the snail's slime <em>does</em> keep it stuck to the ground. That's what lets it slide up walls or upside down. But that stickiness isn't what lets it do what our inchworm does—keep in mind, we're trying to figure out how the snail "pushes" on some parts of its body and not others, if it's not lifting its body like the inchworm.
-            </p>
-            <p>
-                If it was about how <em>sticky</em> the slime was, that would work: because some parts were sticky, that part of the body would be "more stuck" to the ground than another part, and so the next part of the snail could push against it. This is the whole idea behind our multi-humped/rolling inchworm thinking.
-            </p>
-            <p>
-                But Nature's one level more complicated than that. The slime doesn't get stickier, it gets more viscous. The snail "pushes off" these thicker blocks of slime, stretching out the parts of its body which are atop the "thinner" blocks.
-            </p>
-            <p>
-                In other words, what happens is that the slug's muscles squeeze the slime in this wacky, traveling wave. In some places that makes the slime thicker. This means that when the slug <em>stretches</em> its muscles above the parts which are <em>thinner</em>, it can "push" against the parts which are connected to the surface by the more viscous fluid, <span class='i'>i.e.</span> the thicker parts. As the snail stretches, it's also squeezing a different part of the slime, shifting area of the blob of slime which is thicker up while pushing against it.
-            </p>
-            <p>
-                In this way, the snail has a handful of thicker blobs which it rolls up its body, stretching its body and pushing against those thicker blobs in a rolling wave, like a weird cross between that rope we saw, an earthworm, an inchworm, and an otherworldly magical glue (<span class='i'>i.e.</span> snail slime).
-            </p>
-            <p>
-                OK, that's about as much as I really understand right now. You can take a look at <a class='link dim blue' href="#related-resources">the other resources I found</a> useful in understanding snail locomotion below, or some of <a class='link dim blue' href="#other-questions-which-came-up-observing-snails">the other questions</a> which came up while observing snails.
-            </p>
-            <p>
-                Note that some of the additional research materials explain other elements of snail locomotion (like the relative speed of the waves of viscous slime compared to the snail speed overall, the different explanations for what makes the slime get thinner when the snail squeezes it, <span class='i'>etc.</span>). I tried not to include anything here which I didn't feel like I really understood, but there are some good bits and pieces for future investigation worth checking out, if you find yourself interested.
-            </p>
+            <figure class='w-100 cf ma0'>
+                <div class='w-100 center'>
+                    <video class='w-100' src='./assets/real-inchworm.mp4' autoplay loop></video>
+                </div>
+                <p>
+                    So that's how the inchworm moves.
+                </p>
+                <p>
+                    And actually, it's pretty similar to how an earthworm moves…
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video id='live-earthworm' class='w-100' src='./assets/live-earthworm.mp4' autoplay loop></video>
+                    </div>
+                </figure>
+                <p>
+                    …except an earthworm doesn't really squinch up in the same way. Earthworms can shorten and lengthen different parts of their body because of some amazing plumbing they have inside of them. This plumbing lets the earthworm stretch different parts of themselves longer or shorter, all along its body.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/model-earthworm.mp4' autoplay loop></video>
+                        <script>
+                        let earthwormModel = document.querySelector("video[src='./assets/model-earthworm.mp4']");
+                        earthwormModel.addEventListener('play', function(event) {
+                            earthwormModel.playbackRate = 3;
+                        });
+                        </script>
+                    </div>
+                </figure>
+                <p>
+                    But, if the earthworm doesn't squinch up and down in the same way, what makes parts of it stick and parts of it slide? Unlike the inchworm (which just puts its body on the ground to stick/lifts it to slide), the earthworm has these amazing bristles along its whole body which it can extend and retract. If we look at a slice of the earthworm, it looks something like this…you can see the bristles indicated by the arrow:
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <img class='w-100' alt='Section of an earthworm, showing the bristles on its exterior' src='./assets/earthworm-section.png'>
+                    </div>
+                </figure>
+                <p>And the earthworm extends its bristles in the part of its body which its contracting, and retracts them where its body is extending.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/earthworm-bristles.mp4' autoplay loop></video>
+                        <script>
+                        let earthwormBristles = document.querySelector("video[src='./assets/earthworm-bristles.mp4']");
+                        earthwormBristles.addEventListener('play', function(event) {
+                            earthwormBristles.playbackRate = 3;
+                        });
+                        </script>
+                    </div>
+                </figure>
+                <p>
+                    So, it grabs the surrounding soil and pushes off of it, contracting and extending as it pulls and pushes its way through soil.
+                </p>
+                <p>
+                    This is something else that's different than our inchworm— the earthworm has <em>many</em> "feet" (for our purposes, a foot is just the thing that sticks to the ground that we push off of). Just to make sure we understand, let's try to take this back to our inchworm. Here's a simple line-animation of how I think an inchworm moves— its "feet" are the parts that stay in contact with the ground (which I haven't drawn here).
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <img class='w-100' alt='A line drawing animation of an inchworm' src='./assets/basic-inchworm.gif'>
+                    </div>
+                </figure>
+                <p>
+                    The earthworm has a ton of "feet". But for now, let's start just by imagining an inchworm with two humps instead of one. (Or, if it's less weird for you, imagine two inchworms, where one inchworm's head hangs onto the other one's butt.)
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <img class='w-100' alt='A line drawing of an inchworm with two humps' src='./assets/two-hump-inchworm.png'>
+                    </div>
+                </figure>
+                <p>
+                    If our two humped inchworm were to squinch up its humps and move the parts of the inchworm which are stuck on the ground, we'd have a three-footed inchworm.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <img class='w-100' alt='A line drawing animation of an inchworm with two humps' src='./assets/two-hump-inchworm.gif'>
+                    </div>
+                </figure>
+                <p>
+                    With that, you can imagine how we might go through a similar exercise to make a four- or five- or <em>n</em>-footed inchworm.
+                </p>
+                <p>
+                    OK cool. Now let's imagine something weirder. Instead of the hump squinching and stretching, imagine that the part of the worm touching the ground—the foot—"rolls" forward. Kinda like the worm doing a moonwalk, the part of the worm touching the ground doesn't slide backwards to squinch up, instead, the part of the worm touching the ground changes, shifting forward or back.
+                </p>
+                <p>
+                    What?
+                </p>
+                <p>
+                    Yeah, this is hard to wrap your head around.
+                </p>
+                <p>
+                    In our current inchworm, the part of the inchworm that's the hump and the part that's the foot stay the same as it moves.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <img class='w-100' alt='A line drawing animation of an inchworm with two humps, each section a different color' src='./assets/two-color-hump-inchworm.gif'>
+                    </div>
+                </figure>
+                <p>
+                    So here, for example, the green parts are the parts which scrunch. But, this doesn't have to be the case. You could imagine that an inchworm could, say, alternate which parts of its body it scrunches up, like this
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <img class='w-100' alt='A line drawing animation of an inchworm with two humps, each section a different color, but the squinching section alternating' src='./assets/two-alternating-color-hump-inchworm.gif'>
+                    </div>
+                </figure>
+                <p>
+                    But those sections we're highlighting are made up. A real inchworm (or earthworm) has dozens and sometimes hundreds of sections. You could imagine that instead of alternating sections that scrunch up, we could just slowly shift the sections which are scrunching up.
+                </p>
+                <p>
+                    Let's look at it as a diagram.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <div class='mt4 mb4 near-white'>
+                            <code>L — K — J — I — H — G — F — E — D — C — B — A</code>
+                        </div>
+                    </div>
+                </figure>
+                <p>
+                    Imagine this diagram represents an inchworm with a bunch more sections, of which, each one could scrunch. So our two hump earthworm might, for example, have been scrunching <span class='i'>AC</span> and <span class='i'>FH</span>.
+                </p>
+                <p>
+                    So with this notation, what I meant when I said to imagine that we could <em>shift</em> the section which was scrunching is that maybe at first <span class='i'>AC</span> scrunches, then <span class='i'>BD</span>, then <span class='i'>CE</span>, and so on. And at the same time, maybe <span class='i'>FH</span> scrunches, then <span class='i'>GI</span>, then <span class='i'>HJ</span>. In other words, the first scrunch involves <span class='i'>AC</span>/<span class='i'>FH</span>, then <span class='i'>BD</span>/<span class='i'>GI</span>,then <span class='i'>CE</span>/<span class='i'>HJ</span>, and so on.
+                </p>
+                <p>
+                    In this sense, the "foot" is more like a "wave" which is rolling down the inchworm. Instead of sections, imagine the inchworm as continuous—<span class='i'>i.e.</span> where every part of the work could be a foot—and you imagine hundreds or thousands of sections…kind of like a wave in a rope.
+                </p>
+                <p>
+                    You can see this in lots of other places too. People can do stomach rolls, for example:
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/stomach-roll.mp4' autoplay loop></video>
+                    </div>
+                </figure>
+                <p>
+                    Or body rolls:
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/body-roll.mp4' autoplay loop></video>
+                    </div>
+                </figure>
+                <p>
+                    Or the worm:
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/the-worm.mp4' autoplay loop></video>
+                    </div>
+                </figure>
+                <p>
+                    But what ties them all together is the wave traveling through a medium—our body. You can imagine a bit more clearly what this looks like for a worm if we look at a bigger wave moving through something that looks like a worm…<span class='i'>e.g.</span> a rope.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/waving-rope.mp4' autoplay loop></video>
+                    </div>
+                </figure>
+                <p>
+                    While that's a video of a wacky exercise, imagine that the rope was sticky and made of muscle, so that as the part of the wave touching the ground moved, the rope was also <em>pushing against</em> the part of the wave touching the ground.
+                </p>
+                <p>
+                    Well incredibly, this is roughly how the snail works— This is what I meant when I asked you to imagine those humps <em>rolling</em> instead of lifting.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/snail-gliding-waves.mp4' autoplay loop></video>
+                    </div>
+                </figure>
+                <p>
+                    Except, we still have a couple questions to answer in this analogy. One of them is that a snail doesn't lift off the ground. An inchworm is lifting its body off the ground to reduce friction in some places. Those humps can push against its "feet" which are touching the ground.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/snail-gliding-from-side.mp4' autoplay loop></video>
+                        <script>
+                        let snailFromSide = document.querySelector("video[src='./assets/snail-gliding-from-side.mp4']");
+                        snailFromSide.addEventListener('play', function(event) {
+                            snailFromSide.playbackRate = 3;
+                        });
+                        </script>
+                    </div>
+                </figure>
+                <p>
+                    The snail's body stays in contact with the ground the whole time. So what gives?
+                </p>
+                <p>
+                    Well, it turns out that the snail can do something like the earthworm. Remember how the earthworm could extend bristles out of part of its body to grab the dirt around it, and use that kinda like claws to push and pull its way through the soil? Snails can do something kind of like that— except instead of controlling bristles, snails control how sticky different areas underneath it are. That's actually what you're seeing in those waves in that earlier video of the underside of a snail…
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <img class='w-100' alt='Two photos of a snail from below, in color and black and white, which highlight the waves moving it' src='./assets/snail-wave-bw-and-color.png'>
+                    </div>
+                </figure>
+                <p>
+                    The dark parts of the snail are less sticky than the light parts. And that's all due to its slime.
+                </p>
+                <p>
+                    It turns out the slime snails make is pretty special. There are actually two types of slime (that help lubricate and stick to things, respectively), and there are still plenty of open questions of exactly how the slimes work. But for our purposes, the most important thing to know about the slime that's underneath the snail is that when you push on it or squeeze it, it gets <em>less viscous</em>.
+                </p>
+                <p>
+                    Roughly, that means that it acts like it's "less thick," or "thinner".
+                </p>
+                <p>
+                    You know how it's easy to move your hand through water, a bit harder to move it through paint, even harder to move it through mayonnaise, and even harder than that to move it through peanut butter? That's viscosity. It's how much a fluid resists changing its shape when you push on it.
+                </p>
+                <p>
+                    Most fluids that we're familiar with resist the same amount no matter how hard we're pushing on it. But some fluids change depending on how hard you push. They're called "non-Newtonian" for reasons that don't really matter to us.
+                </p>
+                <p>
+                    Some get thicker—like <a class='link dim blue' href='https://en.wikipedia.org/wiki/Non-Newtonian_fluid#Oobleck'>oobleck</a>, if you've played with that before. Those are called "shear thickening". That roughly means that when you apply a force, the liquid gets thicker (<span class='i'>i.e.</span> more viscous).
+                </p>
+                <p>
+                    Weirdly, there are some fluids which actually get <em>less viscous</em> when you push on them. Those are called "shear-thinning". This is the type of fluid snail's slime is. And this is the secret to the snail's motion. Incredibly, people don't understand what makes the slime shear thinning.
+                </p>
+                <p>
+                    OK, so snails have this wild slime that gets thinner when we squeeze it. Cool. But how does the snail squeeze it? It turns out people don't <em>totally</em> know, but they think there are at least two things happening with the snail's muscles which squeeze the slime. The first is that the muscles on its rim, around the center of its underside, squeeze inward, toward the center, pinching the slime. You can see that oscillation moving around the rim of the snail's foot if you look closely…if you watch the very edge of its rim, you'll see it looks like there are waves traveling <em>around</em> it.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/snail-side-wave.mp4' autoplay loop></video>
+                    </div>
+                </figure>
+                <p>
+                    The second is that kind of like the earthworm, the snail's body itself stretches in some places and contracts in others, and because the slime sticks to the body, this squeezes the slime in the other direction.
+                </p>
+                <p>
+                    Together, if you look closely at the perimeter of the snail, you'll see that there's kind of this oscillation traveling <em>around</em> the edge of the snail <em>and</em> the whole snail is kind of puckering up and then expanding, pulsing.
+                </p>
+                <figure class='w-100 cf ma0'>
+                    <div class='w-100 center'>
+                        <video class='w-100' src='./assets/snail-body-pulse.mp4' autoplay loop></video>
+                    </div>
+                </figure>
+                <p>
+                    The incredibly coordinated movement of these muscles is what creates those waves of sticky and less sticky slime.
+                </p>
+                <p>
+                    But…here I have to pause and admit that I lied when I said the snail controls how <em>sticky</em> its underside is. It's really about how viscous it is. Stickiness doesn't have anything to do with that. Super glue is <em>very sticky</em>, but not viscous at all. Elmer's glue is way less sticky, but much more viscous.
+                </p>
+                <p>
+                    It would be simpler if this was just about how sticky the slime is. And the snail's slime <em>does</em> keep it stuck to the ground. That's what lets it slide up walls or upside down. But that stickiness isn't what lets it do what our inchworm does—keep in mind, we're trying to figure out how the snail "pushes" on some parts of its body and not others, if it's not lifting its body like the inchworm.
+                </p>
+                <p>
+                    If it was about how <em>sticky</em> the slime was, that would work: because some parts were sticky, that part of the body would be "more stuck" to the ground than another part, and so the next part of the snail could push against it. This is the whole idea behind our multi-humped/rolling inchworm thinking.
+                </p>
+                <p>
+                    But Nature's one level more complicated than that. The slime doesn't get stickier, it gets more viscous. The snail "pushes off" these thicker blocks of slime, stretching out the parts of its body which are atop the "thinner" blocks.
+                </p>
+                <p>
+                    In other words, what happens is that the snail's muscles squeeze the slime in this wacky, traveling wave. In some places that makes the slime thicker. This means that when the snail <em>stretches</em> its muscles above the parts which are <em>thinner</em>, it can "push" against the parts which are connected to the surface by the more viscous fluid, <span class='i'>i.e.</span> the thicker parts. These different muscle contractions producing waves are <em>coordinated</em>—as the snail stretches, it's also squeezing a different part of the slime, shifting area of the blob of slime which is thicker up while pushing against it.
+                </p>
+                <p>
+                    In this way, the snail has a handful of thicker blobs which it rolls up its body, stretching its body and pushing against those thicker blobs in a rolling wave, like a weird cross between that rope we saw, an earthworm, an inchworm, and an otherworldly magical glue (<span class='i'>i.e.</span> snail slime).
+                </p>
+                <p>
+                    It's reasonable to ask: Why does the snail need all this slime in the first place?  Why can't it just push on the ground directly?  Well, there are at least two pieces to that.
+                </p>
+                <p>
+                    The first is that unlike the inchworm, the snail is in contact with the ground the whole time.  If it didn't do this slime-stretching wackiness, it would need to <em>lift</em> parts of its body off the ground.  That's a big deal.  The snail's slime also lets it travel over a very wide variety of surfaces—sticky and sharp and rough and smooth.  But it only lets it do that if it adheres to the surface, and that's best served by having as much surface area in contact with the surface as possible (kinda the way it takes more effort to pull off a big, glued down thing than a small one).
+                </p>
+                <p>
+                    OK, that's about as much as I really understand right now. You can take a look at <a class='link dim blue' href="#related-resources">the other resources I found</a> useful in understanding snail locomotion below, or some of <a class='link dim blue' href="#other-questions-which-came-up-observing-snails">the other questions</a> which came up while observing snails.
+                </p>
+                <p>
+                    Note that some of the additional research materials explain other elements of snail locomotion (like the relative speed of the waves of viscous slime compared to the snail speed overall, the different explanations for what makes the slime get thinner when the snail squeezes it, <span class='i'>etc.</span>). I tried not to include anything here which I didn't feel like I really understood, but there are some good bits and pieces for future investigation worth checking out, if you find yourself interested.
+                </p>
         </section>
     </div>
     <div id="other-questions-which-came-up-observing-snails" class='w-100 pa2'>
@@ -454,7 +560,7 @@
                     <li class='mb4'><a class='link dim dark-blue' href='https://github.com/klaemo/s3-website'><code>s3-website</code></a> made the process of deploying this onto Amazon S3 as a static site very simple.</li>
                     <li class='mb4'><a class='link dim dark-blue' href='https://usepastel.com'>Pastel</a> was a nice service for soliciting feedback on the site. I wish we could find a free one ¯\_(ツ)_/¯</li>
                     <li class='mb4'><a class='link dim dark-blue' href='https://github.com/aresnick/figuring-out-how-snails-move'>Here</a> you can find the GitHub repository for this project (<span class='i'>sans</span> the <a class='link dim dark-blue' href='#media-archive'>media archive</a>, which is too big for GitHub and stored on S3)</li>
-                    <li>I used <a class='link dim dark-blue' href='http://www.favicomatic.com/'>Favic-o-matic</a> to generate the spiral favicon for the site.</li>
+                    <li>I used <a class='link dim dark-blue' href='https://twitter.com/favicomatic?lang=en'>Favic-o-matic</a> to generate the spiral favicon for the site.</li>
                 </ul>
             </section>
         </section>
@@ -608,6 +714,16 @@
             </section>
         </section>
     </div>
+    <script>
+    window.addEventListener('load', function() {
+        // Unclear why I need this, seems like a Chrome/Safari bug with autoplay?  https://stackoverflow.com/questions/17994666/video-auto-play-is-not-working-in-safari-and-chrome-desktop-browser
+        // I've encountered it before, but previously, re-encoding with CloudConvert worked.  This time it didn't ¯\_(ツ)_/¯
+        let videos = Array.from(document.querySelectorAll('video'));
+        let autoplayVideos = videos.filter(v => v.hasAttribute('autoplay'));
+        let pausedAutoplayVideos = autoplayVideos.filter(av => av.paused);
+        pausedAutoplayVideos.forEach(pav => pav.play());
+    });
+    </script>
 </body>
 
 </html>
